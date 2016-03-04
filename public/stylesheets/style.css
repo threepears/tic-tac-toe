@@ -1,0 +1,37 @@
+#container {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#gameBoard {
+  margin: 0 auto;
+  width: 452px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.row {
+  line-height: 0.7em;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+
+#box1,
+#box3,
+#box5,
+#box7,
+#box9 {
+  background-color: steelblue;
+}
+
+#box2,
+#box4,
+#box6,
+#box8 {
+  background-color: lightblue;
+}
