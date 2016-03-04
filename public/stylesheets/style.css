@@ -4,11 +4,17 @@
   text-align: center;
 }
 
+h1 {
+  margin-bottom: 25px;
+}
+
 #gameBoard {
   margin: 0 auto;
-  width: 452px;
+  width: 472px;
   padding: 10px;
   background-color: #fff;
+  border: 1px solid #777;
+  border-radius: 10px;
 }
 
 .row {
