@@ -1,4 +1,4 @@
-let currentPlayer = "Player 1";
+let currentPlayer = "Player One";
 let back;
 let currentArray;
 let winner = false;
@@ -21,7 +21,7 @@ function containsAll(needles, haystack){
 $(".box").click(function() {
   let currentBox = $(this);
 
-  if (currentPlayer === "Player 1") {
+  if (currentPlayer === "Player One") {
     back = "x.png";
   } else {
     back = "o.png";
@@ -31,7 +31,7 @@ $(".box").click(function() {
 
   var boxNum = currentBox.attr("id").slice(3);
 
-  if (currentPlayer === "Player 1") {
+  if (currentPlayer === "Player One") {
     player1.push(parseInt(boxNum));
     currentArray = player1;
   } else {
@@ -55,9 +55,6 @@ $(".box").click(function() {
 
   timer -= 1;
 
-
-  console.log(currentPlayer);
-
   if (winner === true) {
     $("#container h2").html(currentPlayer + " Wins!").css("color", "red");
   } else if (timer === 0) {
@@ -66,9 +63,9 @@ $(".box").click(function() {
     $("#container h2").html(currentPlayer + " Wins! Game Over!").css("color", "red");
   } else {
     if (timer % 2 === 0) {
-      currentPlayer = "Player 2";
+      currentPlayer = "Player Two";
     } else {
-      currentPlayer = "Player 1";
+      currentPlayer = "Player One";
     }
     $("#container h2").html(currentPlayer + "'s Turn!");
   }
