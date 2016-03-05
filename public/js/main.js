@@ -49,6 +49,9 @@ $(".box").click(function() {
     console.log(result);
     if (result === true) {
       winner = true;
+      combos[i].forEach( num => {
+        $("#box" + num).css("background-color", "red");
+      });
       break;
     }
   }
@@ -58,7 +61,7 @@ $(".box").click(function() {
   if (winner === true) {
     $("#container h2").html(currentPlayer + " Wins!").css("color", "red");
   } else if (timer === 0) {
-    $("#container h2").html("Game Over!").css("color", "red");
+    $("#container h2").html("Sorry...No Winner. Game Over!").css("color", "red");
   } else if (timer === 0 && winner === true) {
     $("#container h2").html(currentPlayer + " Wins! Game Over!").css("color", "red");
   } else {
